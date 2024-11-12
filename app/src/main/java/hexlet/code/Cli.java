@@ -3,26 +3,23 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Cli {
+    static Scanner console = new Scanner(System.in);
 
-    public String askName() {
+    public static String askName() {
 
         System.out.print("May I have your name? ");
-        Scanner console = new Scanner(System.in);
         String name = console.nextLine();
         System.out.println("Hello, " + name + ".");
 
         return name;
     }
 
-    public void evenGame(){
+    public static void evenGame(){
 
-        Cli gameUser2 = new Cli();
-        String name = gameUser2.askName();
+        String name = askName();
         String correctAnswer = "yes";
         String incorrectAnswer = "no";
         int gameCount = 3;
-
-        Scanner console = new Scanner(System.in);
 
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'");
 

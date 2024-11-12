@@ -8,6 +8,7 @@ public class App {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 – Greet");
         System.out.println("2 – Even");
+        System.out.println("3 - Calc");
         System.out.println("0 – Exit");
 
         Scanner numberOfGame = new Scanner(System.in);
@@ -17,13 +18,15 @@ public class App {
 
         switch (choice) {
             case 1:
-                Cli cli1 = new Cli();
-                cli1.askName();
+                Cli.askName();
                 break;
 
             case 2:
-                Cli cli2 = new Cli();
-                cli2.evenGame();
+                Cli.evenGame();
+                break;
+
+            case 3:
+                Engine.calcGame();
                 break;
 
             case 0:
