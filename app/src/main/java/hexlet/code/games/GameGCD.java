@@ -38,7 +38,7 @@ public class GameGCD {
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" +
                         (getDivisor(num1, num2)) + "'.");
-                System.out.println("Let's try again," + name + "!");
+                System.out.println("Let's try again, " + name + "!");
                 return;
             }
         }

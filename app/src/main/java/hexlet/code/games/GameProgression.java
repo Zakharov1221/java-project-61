@@ -25,7 +25,7 @@ public class GameProgression {
         } else {
             System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" +
                     "10" + "'.");
-            System.out.println("Let's try again," + name + "!");
+            System.out.println("Let's try again, " + name + "!");
             return;
         }
         System.out.println(progression2.replace("21", ".."));
@@ -37,7 +37,7 @@ public class GameProgression {
         } else {
             System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" +
                     "21" + "'.");
-            System.out.println("Let's try again," + name + "!");
+            System.out.println("Let's try again, " + name + "!");
             return;
         }
         System.out.println(progression3.replace("36", ".."));
@@ -49,7 +49,7 @@ public class GameProgression {
         } else {
             System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" +
                     "36" + "'.");
-            System.out.println("Let's try again," + name + "!");
+            System.out.println("Let's try again, " + name + "!");
             return;
         }
         System.out.println("Congratulations, " + name + "!");
