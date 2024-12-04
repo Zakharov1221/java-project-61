@@ -1,41 +1,41 @@
 package hexlet.code.games;
 
+import static hexlet.code.Cli.askName;
 import java.util.Scanner;
 
-import static hexlet.code.Cli.askName;
-
 public class GameEven {
+
+    public static boolean isEven(int randomNumber) {
+
+        if (randomNumber % 2 == 0) {
+            return true;
+        } else {
+        return false;
+        }
+}
 
     public static void evenGame(){
 
         String name = askName();
-        Scanner console = new Scanner(System.in);
-        int gameCount = 3;
+        Scanner console= new Scanner(System.in);
 
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'");
 
-        for (int i = 1; i <= gameCount; i = i + 1) {
-            var randomNumber = (int) (Math.floor(Math.random() * 98) + 1);
-            System.out.println("Question: " + randomNumber);
-            String answer = console.nextLine();
+        for (int i = 1; i <= 3; i = i + 1) {
+            var randomNumber = (int) (Math.floor(Math.random() * 100) + 2);
+            System.out.println("Question:" + randomNumber);
+            String answer = console.next();
             System.out.println("Your answer: " + answer);
 
-            if (randomNumber % 2 == 0 && answer.equals("yes") || randomNumber % 2 != 0 && answer.equals("no")){
+            var result = isEven(randomNumber) ? "yes" : "no";
+
+            if (answer.equals(result))
+            {
                 System.out.println("Correct!");
-
-            } else if (randomNumber % 2 != 0 && answer.equals("yes")){
-                System.out.println("'yes' wrong answer ;(. Correct answer was 'no'.");
-                System.out.println("Let's try again, " + name);
-                return;
-
-            } else if (randomNumber % 2 == 0 && answer.equals("no")){
-                System.out.println("'no' wrong answer ;(. Correct answer was 'yes'.");
-                System.out.println("Let's try again, " + name);
-                return;
-
             } else {
-                System.out.println("Wrong answer anyway!");
-                System.out.println("Let's try again, " + name);
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" +
+                        result + "'.");
+                System.out.println("Let's try again, " + name + "!");
                 return;
             }
         }
