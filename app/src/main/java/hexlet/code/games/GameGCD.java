@@ -1,6 +1,8 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import static hexlet.code.Cli.askName;
+import static hexlet.code.Engine.*;
 import java.util.Scanner;
 
 public class GameGCD {
@@ -19,29 +21,24 @@ public class GameGCD {
     }
 
     public static void gcdGame() {
+
         String name = askName();
         Scanner console = new Scanner(System.in);
 
         System.out.println("Find the greatest common divisor of given numbers.");
 
-        for (int i = 1; i <= 3; i = i + 1) {
+        for (int i = 1; i <= ROUND_COUNT; i++) {
 
             var num1 = (int) (Math.floor(Math.random() * 100) + 1);
             var num2 = (int) (Math.floor(Math.random() * 100) + 1);
 
             System.out.println("Question: " + num1 + " " + num2);
-            int answer = console.nextInt();
+            var answer = console.next();
             System.out.println("Your answer: " + answer);
 
-            if (answer == (getDivisor(num1, num2))) {
-                System.out.println("Correct!");
-            } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" +
-                        (getDivisor(num1, num2)) + "'.");
-                System.out.println("Let's try again, " + name + "!");
-                return;
-            }
+            var result = Integer.toString(getDivisor(num1, num2));
+
+            Engine.gameChecker(answer, result, name);
         }
-        System.out.println("Congratulations, " + name + "!");
     }
 }

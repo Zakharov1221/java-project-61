@@ -1,27 +1,25 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import static hexlet.code.Cli.askName;
+import static hexlet.code.Engine.*;
 import java.util.Scanner;
 
 public class GameEven {
 
     public static boolean isEven(int randomNumber) {
 
-        if (randomNumber % 2 == 0) {
-            return true;
-        } else {
-        return false;
-        }
+        return randomNumber % 2 == 0;
 }
 
     public static void evenGame(){
 
         String name = askName();
-        Scanner console= new Scanner(System.in);
+        Scanner console = new Scanner(System.in);
 
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'");
 
-        for (int i = 1; i <= 3; i = i + 1) {
+        for (int i = 1; i <= ROUND_COUNT; i++) {
             var randomNumber = (int) (Math.floor(Math.random() * 100) + 2);
             System.out.println("Question:" + randomNumber);
             String answer = console.next();
@@ -29,16 +27,7 @@ public class GameEven {
 
             var result = isEven(randomNumber) ? "yes" : "no";
 
-            if (answer.equals(result))
-            {
-                System.out.println("Correct!");
-            } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" +
-                        result + "'.");
-                System.out.println("Let's try again, " + name + "!");
-                return;
-            }
+            Engine.gameChecker(answer, result, name);
         }
-        System.out.println("Congratulations, " + name + "!");
     }
 }
