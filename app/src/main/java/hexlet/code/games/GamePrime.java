@@ -29,7 +29,7 @@ public class GamePrime {
 
         for (int i = 1; i <= ROUND_COUNT; i++) {
             var randomNumber = (int) (Math.floor(Math.random() * 100) + 2);
-            System.out.println("Question:" + randomNumber);
+            System.out.println("Question: " + randomNumber);
             String answer = console.next();
             System.out.println("Your answer: " + answer);
 

@@ -39,8 +39,8 @@ public class GameCalc {
                 if (answer == (randomNumber3 + randomNumber4)) {
                     System.out.println("Correct!");
                 } else {
-                    System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + (randomNumber3 + randomNumber4) + "'.");
-                    System.out.println("Let's try again," + name + "!");
+                    System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was'" + (randomNumber3 + randomNumber4) + "'.");
+                    System.out.println("Let's try again, " + name + "!");
                     return;
                 }
 

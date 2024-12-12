@@ -19,7 +19,7 @@ public class App {
         Scanner numberOfGame = new Scanner(System.in);
         int choice = numberOfGame.nextInt();
 
-        System.out.println("Your choice " + choice);
+        System.out.println("Your choice: " + choice);
 
         switch (choice) {
             case 1:

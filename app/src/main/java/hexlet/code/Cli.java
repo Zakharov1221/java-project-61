@@ -7,7 +7,7 @@ public class Cli {
 
     public static String askName() {
 
-        System.out.println("May I have your name? ");
+        System.out.println("May I have your name?");
         String name = console.nextLine();
         System.out.println("Hello, " + name + "!");
 
