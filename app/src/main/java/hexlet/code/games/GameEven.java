@@ -17,7 +17,7 @@ public class GameEven {
         String name = askName();
         Scanner console = new Scanner(System.in);
 
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'");
+        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
         for (int i = 1; i <= ROUND_COUNT; i++) {
             var randomNumber = (int) (Math.floor(Math.random() * 100) + 2);
