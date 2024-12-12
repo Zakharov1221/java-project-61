@@ -31,7 +31,7 @@ public class GameProgression {
                 }
             }
 
-            System.out.println("Question: " + progression);
+            System.out.println("Question:" + progression);
             var answer = console.next();
             System.out.println("Your answer: " + answer);
 
