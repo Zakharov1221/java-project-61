@@ -35,7 +35,10 @@ public class GamePrime {
 
             var result = isPrime(randomNumber) ? "yes" : "no";
 
-            Engine.gameChecker(answer, result, name);
+            if (!Engine.gameChecker(answer, result, name)) {
+                return;
+            }
         }
+        System.out.println("Congratulations, " + name + "!");
     }
 }

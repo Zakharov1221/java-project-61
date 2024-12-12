@@ -27,7 +27,10 @@ public class GameEven {
 
             var result = isEven(randomNumber) ? "yes" : "no";
 
-            Engine.gameChecker(answer, result, name);
+            if (!Engine.gameChecker(answer, result, name)) {
+                return;
+            }
+        }
+        System.out.println("Congratulations, " + name + "!");
         }
     }
-}

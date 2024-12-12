@@ -38,7 +38,10 @@ public class GameGCD {
 
             var result = Integer.toString(getDivisor(num1, num2));
 
-            Engine.gameChecker(answer, result, name);
+            if (!Engine.gameChecker(answer, result, name)) {
+                return;
+            }
         }
+        System.out.println("Congratulations, " + name + "!");
     }
 }

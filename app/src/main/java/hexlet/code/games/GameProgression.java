@@ -35,8 +35,11 @@ public class GameProgression {
             var answer = console.next();
             System.out.println("Your answer: " + answer);
 
-            Engine.gameChecker(answer, result, name);
+            if (!Engine.gameChecker(answer, result, name)) {
+                return;
+            }
         }
+        System.out.println("Congratulations, " + name + "!");
     }
 }
 
