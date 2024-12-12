@@ -1,8 +1,8 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import static hexlet.code.Cli.askName;
-import static hexlet.code.Engine.*;
+import static hexlet.code.games.Cli.askName;
+import static hexlet.code.Engine.ROUND_COUNT;
 import java.util.Scanner;
 
 public class GameGCD {
