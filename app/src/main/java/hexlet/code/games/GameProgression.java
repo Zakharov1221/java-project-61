@@ -24,6 +24,7 @@ public class GameProgression {
 
             String result = null;
             for (int j = 1; j < length; j++) {
+
                 if (j == index) {
                     progression.append(" ").append("..");
                     result = Integer.toString(step * j);
