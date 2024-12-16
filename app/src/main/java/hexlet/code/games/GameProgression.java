@@ -45,4 +45,3 @@ public class GameProgression {
         System.out.println("Congratulations, " + name + "!");
     }
 }
-
