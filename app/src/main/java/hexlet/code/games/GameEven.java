@@ -6,6 +6,8 @@ import static hexlet.code.Engine.ROUND_COUNT;
 import java.util.Scanner;
 
 public class GameEven {
+    private static final int MAX_RANDOM_NUMBER = 100;
+    private static final int MIN_RANDOM_NUMBER = 1;
 
     public static boolean isEven(int randomNumber) {
 
@@ -20,7 +22,8 @@ public class GameEven {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
         for (int i = 1; i <= ROUND_COUNT; i++) {
-            var randomNumber = (int) (Math.floor(Math.random() * 100) + 2);
+            var randomNumber = Engine.getRandomNumber(MAX_RANDOM_NUMBER, MIN_RANDOM_NUMBER);
+
             System.out.println("Question: " + randomNumber);
             String answer = console.next();
             System.out.println("Your answer: " + answer);

@@ -1,9 +1,13 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+
 import static hexlet.code.games.Cli.askName;
 import java.util.Scanner;
 
 public class GameCalc {
+    private static final int MAX_RANDOM_NUMBER = 30;
+    private static final int MIN_RANDOM_NUMBER = 1;
 
     public static void calcGame() {
 
@@ -13,12 +17,12 @@ public class GameCalc {
         System.out.println("What is the result of the expression?");
 
             for (int i = 1; i <= 1; i++) {
-                var randN1 = (int) (Math.floor(Math.random() * 30) + 1);
-                var randN2 = (int) (Math.floor(Math.random() * 30) + 1);
-                var randN3 = (int) (Math.floor(Math.random() * 30) + 1);
-                var randN4 = (int) (Math.floor(Math.random() * 30) + 1);
-                var randN5 = (int) (Math.floor(Math.random() * 30) + 1);
-                var randN6 = (int) (Math.floor(Math.random() * 30) + 1);
+                var randN1 = Engine.getRandomNumber(MAX_RANDOM_NUMBER, MIN_RANDOM_NUMBER);
+                var randN2 = Engine.getRandomNumber(MAX_RANDOM_NUMBER, MIN_RANDOM_NUMBER);
+                var randN3 = Engine.getRandomNumber(MAX_RANDOM_NUMBER, MIN_RANDOM_NUMBER);
+                var randN4 = Engine.getRandomNumber(MAX_RANDOM_NUMBER, MIN_RANDOM_NUMBER);
+                var randN5 = Engine.getRandomNumber(MAX_RANDOM_NUMBER, MIN_RANDOM_NUMBER);
+                var randN6 = Engine.getRandomNumber(MAX_RANDOM_NUMBER, MIN_RANDOM_NUMBER);
 
                 System.out.println("Question: " + randN1 + " * " + randN2);
                 int answer = console.nextInt();

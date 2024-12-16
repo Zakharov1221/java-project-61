@@ -6,6 +6,8 @@ import static hexlet.code.Engine.ROUND_COUNT;
 import java.util.Scanner;
 
 public class GameProgression {
+    private static final int MAX_RANDOM_NUMBER = 10;
+    private static final int MIN_RANDOM_NUMBER = 1;
 
     public static void progressionGame() {
         String name = askName();
@@ -15,8 +17,8 @@ public class GameProgression {
 
         for (int i = 1; i <= ROUND_COUNT; i++) {
             int length = 10;
-            int step = (int) (Math.floor(Math.random() * 10) + 1);
-            int index = (int) (Math.floor(Math.random() * 10) + 1);
+            int step = Engine.getRandomNumber(MAX_RANDOM_NUMBER, MIN_RANDOM_NUMBER);
+            int index = Engine.getRandomNumber(MAX_RANDOM_NUMBER, MIN_RANDOM_NUMBER);
 
             StringBuilder progression = new StringBuilder();
 
