@@ -14,7 +14,7 @@ public class GameEven {
         return randomNumber % 2 == 0;
 }
 
-    public static void evenGame(){
+    public static void evenGame() {
 
         String name = askName();
         Scanner console = new Scanner(System.in);

@@ -16,7 +16,7 @@ public class GameGCD {
             if (num1 % divisor == 0 && num2 % divisor == 0) {
                 return divisor;
             } else {
-                divisor --;
+                divisor--;
             }
         }
         return divisor;

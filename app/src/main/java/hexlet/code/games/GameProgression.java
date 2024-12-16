@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class GameProgression {
     private static final int MAX_RANDOM_NUMBER = 10;
     private static final int MIN_RANDOM_NUMBER = 1;
+    private static final int PROGRESSION_LENGTH = 10;
 
     public static void progressionGame() {
         String name = askName();
@@ -16,18 +17,18 @@ public class GameProgression {
         System.out.println("What number is missing in the progression?");
 
         for (int i = 1; i <= ROUND_COUNT; i++) {
-            int length = 10;
+
             int step = Engine.getRandomNumber(MAX_RANDOM_NUMBER, MIN_RANDOM_NUMBER);
             int index = Engine.getRandomNumber(MAX_RANDOM_NUMBER, MIN_RANDOM_NUMBER);
 
             StringBuilder progression = new StringBuilder();
+            StringBuilder result = new StringBuilder();
 
-            String result = null;
-            for (int j = 1; j < length; j++) {
+            for (int j = 1; j < PROGRESSION_LENGTH; j++) {
 
                 if (j == index) {
                     progression.append(" ").append("..");
-                    result = Integer.toString(step * j);
+                    result = new StringBuilder(Integer.toString(step * j));
                 } else {
                     progression.append(" ").append(step * j);
                 }
@@ -37,7 +38,7 @@ public class GameProgression {
             var answer = console.next();
             System.out.println("Your answer: " + answer);
 
-            if (!Engine.gameChecker(answer, result, name)) {
+            if (!Engine.gameChecker(answer, String.valueOf(result), name)) {
                 return;
             }
         }

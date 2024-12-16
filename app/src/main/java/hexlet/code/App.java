@@ -21,36 +21,36 @@ public class App {
         System.out.println("0 – Exit");
 
         Scanner numberOfGame = new Scanner(System.in);
-        int choice = numberOfGame.nextInt();
+        String choice = numberOfGame.next();
 
         System.out.println("Your choice: " + choice);
 
         switch (choice) {
-            case 1:
+            case "1":
                 Cli.askName();
                 break;
 
-            case 2:
+            case "2":
                 GameEven.evenGame();
                 break;
 
-            case 3:
+            case "3":
                 GameCalc.calcGame();
                 break;
 
-            case 4:
+            case "4":
                 GameGCD.gcdGame();
                 break;
 
-            case 5:
+            case "5":
                 GameProgression.progressionGame();
                 break;
 
-            case 6:
+            case "6":
                 GamePrime.primeGame();
                 break;
 
-            case 0:
+            case "0":
                 break;
 
             default:
